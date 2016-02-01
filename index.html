@@ -1,0 +1,201 @@
+<!-- Déclaration des balises « méta » pour l’encodage en utf8, la désactivation des modes de compatibilité sous IE et le fait
+que les navigateurs doivent occuper toute la largeur disponible pour afficher le site :-->
+<!-- -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- Déclaration des balises de référencement (description du site, auteur, icône de site, titre du site… vous personnaliserez
+        avec vos informations personnelles) :-->
+        <meta name="description" content="Portfolio d’Amélia Pilou - BTS SIO SLAM">
+        <meta name="author" content="Amélia Pilou">
+        <link rel="icon" href="favicon.ico">
+        <title>Portfolio d'Amélia Pilou (BTS SIO 2016)</title>
+        <!-- -->
+        <!-- Déclaration de la feuille de styles de Bootstrap minimifiée :-->
+        <!-- Bootstrap core CSS -->
+        <!-- -->
+        <link href="css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <!-- -->
+    <!--On va ensuite déclarer la barre de navigation (navbar), et faire en sorte d’utiliser la grille standard de bootstrap (au travers
+    de la classe « container ») :-->
+    <!-- -->
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- -->
+                <!-- On va ensuite créer le nécessaire pour la navigation raccourcie (pour les mobiles) :-->
+                <!-- -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                        <span class="sr-only">Navigation raccourcie</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Mon portfolio</a>
+                </div>
+                <!-- 
+                 On va ensuite déclarer la zone contenant les items de cette barre de navigation :
+                -->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <!--
+                         On va ajouter les items de cette barre de navigation en commençant par l’accueil (onglet donc « actif » sur cette page) :
+                        -->
+                        <li class="active">
+                            <!--
+                             On indique ensuite la page sur lequel pointe le lien :
+                            
+                             <a href="index.html">
+                            On positionne une icône en forme de maison :
+                             <span class="glyphicon glyphicon-home"></span>
+                             Et on ajoute le libellé de l’item :
+                            Accueil
+                             </a>
+                            </li>
+                             Ce qui nous donne sur une seule ligne :
+                            -->
+                        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                        <!-- 
+                         On ajoute donc ensuite l’item « CV » :
+                        -->
+                        <li><a href="#"><span class="glyphicon glyphicon-object-align-top"></span> CV</a></li>
+                        <!--
+                         Pour l’item suivant, nous allons utiliser un menu déroulant :
+                        -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <!--
+                                 Le titre du menu sera « Réalisations » :
+                                -->
+                                <span class="glyphicon glyphicon-list-alt"></span> Réalisations
+                                <span class="caret"></span>
+                            </a>
+                            <!--
+                             Ce menu déroulant sera divisé en deux parties (« En autonomie » et « En entreprise ») séparées par une barre de
+                            séparation (« divider ») et contiendra les items suivants :
+                            -->
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">En autonomie</li>
+                                <li role="presentation"><a role="menuitem" href="#">Application Android</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Site web</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Études et analyses</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">En entreprise</li>
+                                <li role="presentation"><a role="menuitem" href="#">Projet de 1ère année</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Projet de 2ème année</a></li>
+                            </ul>
+                        </li>
+                        <!--
+                         De la même façon, nous allons ajouter un menu « Jury E4 BTS SIO » qui contiendra tout ce qu’il faut pour pouvoir passer
+                        des épreuves dans de bonnes conditions (en commençant par satisfaire les jurys en leur fournissant tout ce qu’il faut
+                        pour qu’ils travaillent sereinement) :
+                        -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <span class="glyphicon glyphicon-education"></span>
+                                Jury E4 BTS SIO <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Documentations contexte</li>
+                                <li role="presentation"><a role="menuitem" href="#">Présentation</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Application</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Missions à réaliser</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Annexes</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Fiches d'examen</li>
+                                <li role="presentation"><a role="menuitem" href="#">Situation professionnelle n°1</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Situation professionnelle n°2</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Démonstrations</li>
+                                <li role="presentation"><a role="menuitem" href="#">Démo SP n°1</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Démo SP n°2</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Codes sources</li>
+                                <li role="presentation"><a role="menuitem" href="#">Sources SP n°1</a></li>
+                                <li role="presentation"><a role="menuitem" href="#">Sources SP n°2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Me contacter</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.navbar-collapse -->
+        </nav>
+        <!--
+             On n’oublie pas d’inclure les fichiers JQuery nécessaires au bon fonctionnement de Bootstrap :
+        -->
+        <!-- Bootstrap core JavaScript ============================================ -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+        </script>
+        <script src="css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="css/bootstrap-3.3.5-dist/js/ie10-viewport-bug-workaround.js">
+        </script>
+        <!--
+         Et on n’oublie pas non plus de fermer les balises de pages :
+        -->
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+ <div class="container">
+ <h1>Bonjour et bienvenue sur mon portfolio !</h1>
+ <p>
+ <img id="maPhoto" class="pull-left img-rounded" src="images/AmeliaPilou.jpg" alt="Ma photo d'identité" /> Je m'appelle Amélia Pilou, j'ai 21 ans
+et ce site a pour vocation de me présenter en tant que personne, en tant qu'étudiante et candidate à l'obtention du BTS SIO (Services Informatiques
+aux Organisations) et en tant que future professionnelle de l'informatique.
+ </p>
+ <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus &raquo;</a></p>
+ </div>
+</div>
+<!--
+Toujours en suivant les modèles présents sur le site de Bootstrap, nous allons maintenant ajouter un pied de page :
+ On va donc ajouter le contenu suivant à notre page d’accueil :
+-->
+<footer>
+ <div class="container">
+ <div class="row">
+ <div class="col-md-4">
+ <h2>Étudiante du CNED</h2>
+ <p>J'ai choisi de suivre le BTS SIO à distance par le Centre National d'Enseignement à Distance car je souhaitais pourvoir avancer à mon
+ rythme, choisir moi même mon emploi du temps, apprendre à être autonome, pouvoir utiliser les outils de collaboration à distance et
+ devenir plus responsable en étant capable de me fixer moi même des contraintes, des limites et des objectifs à atteindre !
+ </p>
+ <p><a class="btn btn-default" href="http://www.cned.fr" target="_blank" role="button">En savoir plus &raquo;</a></p>
+ </div>
+ <div class="col-md-4">
+ <h2>Le BTS SIO</h2>
+ <p>Passionnée d'informatique depuis mon plus jeune âge, j'aime apprendre à faire de nouvelles choses avec mon ordinateur, mon
+ smartphone ou ma tablette. Une Geek ? Oui assurément ! Mais j'aimerais maintenant passer au niveau au dessus et devenir une
+ vraie Nerd, dans le bon sens du terme ! Après mon bac, le BTS SIO s'est présenté comme une évidence. Avec 62% d'Informatique "pure",
+ 15% d'Économie, management et droit de l’informatique, 8% d'Anglais, 8% de culture générale et 7% de Maths, je savais que cette formation
+ allait me mettre le pied à l'étrier pour poursuivre ensuite dans cette voie et devenir informaticienne !
+ </p>
+ <p><a class="btn btn-default" href="https://fr.wikipedia.org/wiki/ Brevet_de_technicien_sup%C3%A9rieur_-_Services_informatiques_aux_organisa
+tions" target="_blank" role="button">En savoir plus &raquo;</a></p>
+ </div>
+ <div class="col-md-4">
+ <h2>Option B SLAM</h2>
+ <p>En fin de premier semestre, on doit choisir notre option. "Solutions Logicielles et Applications Métiers" est l'option qui m'a séduit !
+ Travailler en équipe à la satisfaction de besoins d'un client, définir des spécifications, faire des tests, corriger des bugs,
+ faire de la maintenance... tout en apprenant les bases du métier de développeuse : modélisation des données avec Merise et UML,
+ programmation objet avec Java, C# et PHP, conception de bases de données sous PostgreSQL et MySQL, réalisation de composants
+ logiciels avec Symfony, gestion de projet, méthodes agiles... J'étais sûr que ça serait fait pour moi !
+ </p>
+ <p><a class="btn btn-default" href="http://www.onisep.fr/Ressources/ Univers-Formation/Formations/Post-bac/BTS-Services-informatiques-auxorganisations-option-B-solutions-logicielles-et-applications-metiers"
+target="_blank" role="button">En savoir plus &raquo;</a></p>
+ </div>
+ </div>
+ <hr />
+ <p id="copyright">&copy; Amélia Pilou 2015</p>
+ </div>
+</footer>   </body>
+</html>     
+
+
+
